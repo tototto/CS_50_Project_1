@@ -56,7 +56,7 @@ def editPage(request):
     message = request.GET.get('title')
     wikiTitle = util.get_entry(message)
     return render(request, "encyclopedia/edit.html", {
-        "textToBeEdited": updateWiki(initial={"textArea": wikiTitle}).textArea,
+        "textToBeEdited": updateWiki(initial={"textArea": wikiTitle}),
         "title": message
     })
 
