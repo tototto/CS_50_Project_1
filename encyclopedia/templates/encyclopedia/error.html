@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Title Not Found
+{% endblock %}
+
+{% block body %}
+    <h1>{{ errorMsg }}</h1>
+
+    <ul>
+        <a href="{% url 'index' %}">Go Back Home</a>
+    </ul>
+{% endblock %}

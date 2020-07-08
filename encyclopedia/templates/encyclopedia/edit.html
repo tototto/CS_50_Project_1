@@ -1,0 +1,12 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block body %}
+
+<form action={{title}} method="POST">
+    {% csrf_token %}
+    {{ textToBeEdited }}
+    <br>
+    <button type="submit" class="btn btn-success">Update</button>
+</form>
+
+{% endblock %}
